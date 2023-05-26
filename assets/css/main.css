@@ -1,0 +1,108 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorProducto{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+img{
+    width: 400px;
+    height: 300px;
+    border-radius: 30px;
+    margin-top: 5em;
+}
+
+.imagen h6{
+ color: white;
+ font-size: 1.5em;
+ margin-top: 0.5em;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+input{
+    width: 100%;
+    border-radius: 15px;
+    height: 2em;
+}
+
+input[type="number"]
+{
+    -webkit-appearance: textfield !important;
+    margin: 0;
+    -moz-appearance:textfield !important;
+}
+
+input{
+    margin-top: 1em;
+    font-weight: 500;
+    height: 2.5em;
+} 
+
+.inputs p{
+ margin-top: 1em;
+ color: white;
+ font-weight: 500;
+ font-size: 1.5em;
+}
+
+button{
+    background-color: rgb(223, 170, 24);
+    color: white;
+    height: 50px;
+    width: 200px;
+    margin-top: 1em;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+
+#Calcular{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#errorCantidad{
+    display: none;
+    color: white;
+}
+
+#errorRegion{
+    display: none;
+    color: white;
+}
+
+.infoCalculada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3em;
+    color: white;
+}
+
