@@ -8,6 +8,10 @@ const region = document.querySelector("#region");
 const precio = document.querySelector("#precio"); 
 const nuevoPrecio = precio.innerText.replace(/[^0-9]/g, "");
 
+// Circulo de la esposa
+const colorEsposa = document.querySelector("#colorEsposa"); 
+
+
 // parrafo con mensaje de error a numero negativo, también para validar
 const errCant = document.querySelector("#errorCantidad");
 // parrafo con mensaje de error a string vacío, también para validar
@@ -19,11 +23,17 @@ const muestraInfo = document.querySelector("#muestraInfo");
 const totalInfo = document.querySelector("#totalInfo");
 const cantidadInfo = document.querySelector("#cantidadInfo");
 const regionInfo = document.querySelector("#regionInfo");
+const colorOpcion = document.querySelector('select');
+let colorValue = colorOpcion.value;
 
 cantidad.addEventListener("wheel", function(event){
     if(cantidad.value <= 0){
         event.preventDefault();
     }
+});
+
+colorOpcion.addEventListener('change', function(){
+colorValue = colorOpcion.value;
 });
 
 // Boton que aplicara el innerHTML
@@ -36,7 +46,7 @@ btnCalcular.addEventListener("click", function(){
    if(cantidad.value <= 0){
     errCant.style.display = "block";
     errRegion.style.display = "none";
-   }else if(!esValidoRegion || region.value.trim().length === 0){ // validamos que sea un string
+   }if(!esValidoRegion || region.value.trim().length === 0){ // validamos que sea un string
     errRegion.style.display = "block";
     errCant.style.display = "none";
    }else{
@@ -45,10 +55,16 @@ btnCalcular.addEventListener("click", function(){
     regionInfo.innerHTML = region.value;
     errCant.style.display = "none";
     errRegion.style.display = "none";
-    cantidad.value = "";
-    region.value = "";
-   }
- 
+     if(colorValue == "blanca"){
+        colorEsposa.style.backgroundColor = "RGB(255, 218, 185)";
+    } if(colorValue == "morena"){
+        colorEsposa.style.backgroundColor = "rgb(212, 134, 82)" ;
+    } if(colorValue == "negra"){
+        colorEsposa.style.backgroundColor = "rgb(27, 25, 23)" ;
+    } if(colorValue == "amarilla"){
+        colorEsposa.style.backgroundColor = "rgb(202, 212, 61)" ;
+    }
+   } 
    
 });
 

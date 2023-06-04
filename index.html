@@ -4,37 +4,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body>
     <main>
         <div class="contenedor">
 
-       
-        <div class="contenedorProducto">
-            <div class="imagen">
-                <img src="/assets/imagenes/wife.webp" alt="">
-                <h6>Esposas al mejor precio del mercado</h6>
+        
+            <div class="contenedorProducto">
+                <div class="imagen">
+                    <img src="assets/imagenes/wife.webp" alt="">
+                    <h6>Esposas al mejor precio del mercado</h6>
+                </div>
+                <div class="inputs">
+                    <input id="cantidad" type="number" placeholder="  Cantidad">
+                    <p id="errorCantidad">La cantidad ingresada debe ser mayor a 0</p>
+                    <input id="region" type="text" placeholder="  Region">
+                    <p id="errorRegion">La región no puede ir vacía</p>
+                    <select 
+                    
+                    >
+                        <option value="blanca" class="optBlanca">Blanquita</option>
+                        <option value="morena" class="optMorena">Morena</option>
+                        <option value="negra" class="optNegra">Negrita</option>
+                        <option value="amarilla" class="optAmarilla">Hepatitis</option>
+                    </select>
+                    <p>Precio: <span id="precio">$20.000.000</span></p>
+                </div>
+                <div id="Calcular">
+                    <button id="btnCalcular">Calcular Total</button>
+                </div>
+                
             </div>
-            <div class="inputs">
-                <input id="cantidad" type="number" placeholder="  Cantidad">
-                <p id="errorCantidad">La cantidad ingresada debe ser mayor a 0</p>
-                <input id="region" type="text" placeholder="  Region">
-                <p id="errorRegion">La región no puede ir vacía</p>
-                <p>Precio: <span id="precio">$20.000.000</span></p>
+            <div id="muestraInfo" class="infoCalculada">
+                <p >Total: <span id="totalInfo">0</span></p>
+                <p >Cantidad: <span id="cantidadInfo">0</span></p>
+                <p >Region: <span id="regionInfo">N/A</span></p>
+                <div>
+                <p >Color Esposa: <div id="colorEsposa"></div></p>
+                </div>
             </div>
-            <div id="Calcular">
-                <button id="btnCalcular">Calcular Total</button>
-            </div>
-            
         </div>
-        <div id="muestraInfo" class="infoCalculada">
-            <p >Total: <span id="totalInfo">0</span></p>
-            <p >Cantidad: <span id="cantidadInfo">0</span></p>
-            <p >Region: <span id="regionInfo">N/A</span></p>
-        </div>
-    </div>
     </main>
     
 
